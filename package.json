@@ -1,8 +1,9 @@
 {
   "name": "react-komposer-plus",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "Compose React containers and feed data into components.",
   "main": "index.js",
+  "react-native": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sammkj/react-komposer-plus"
@@ -19,7 +20,6 @@
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch"
   },
-  "react-native": "./lib/index.js",
   "devDependencies": {
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",

@@ -13,6 +13,18 @@ function compose(fn, L1, E1, options = { pure: true }) {
       'Should provide a child component to build the higher order container.'
     );
 
+    if (isReactNative()) {
+      invariant(
+        L1 || L2,
+        'Should provide a loading component in ReactNative.'
+      );
+
+      invariant(
+        E1 || E2,
+        'Should provide a error handling component in ReactNative.'
+      );
+    }
+
     const LoadingComponent = L1 || L2 || DefaultLoadingComponent;
     const ErrorComponent = E1 || E2 || DefaultErrorComponent;
 
@@ -69,7 +81,7 @@ function compose(fn, L1, E1, options = { pure: true }) {
         }
 
         if (loading) {
-          return (<LoadingComponent />);
+          return (<LoadingComponent {...this._getProps()} />);
         }
 
         return (<ChildComponent {...this._getProps()} />);
