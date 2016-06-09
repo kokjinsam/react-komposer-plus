@@ -1,5 +1,15 @@
 # ChangeLog
 
+## v2.0.7
+09-June-2016
+
+* Force `composeWithTracker` to use Tracker from context.
+
+## v2.0.6
+08-June-2016
+
+* Added the ability to pass loading component and error component in `composeWithRedux`. [PR #2](https://github.com/sammkj/react-komposer-plus/pull/2)
+
 ## v2.0.2
 07-June-2016
 

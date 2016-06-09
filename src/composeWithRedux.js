@@ -27,5 +27,5 @@ function composeReduxBase(fn, props, onData) {
 }
 
 export default function composeWithRedux(fn, L1, E1, options) {
-  return compose(composeReduxBase.bind(null, fn),  L1, E1, options);
+  return compose(composeReduxBase.bind(null, fn), L1, E1, options);
 }

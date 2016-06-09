@@ -14,8 +14,7 @@
 
   "globals": {
     "window": true,
-    "navigator": true,
-    "Tracker": true
+    "navigator": true
   },
 
   "ecmaFeatures": {
