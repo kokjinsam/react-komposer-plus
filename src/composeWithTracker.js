@@ -1,6 +1,6 @@
 import compose from './compose';
 
-function composeWithTracker(reactiveFn, L, E, options) {
+function composeWithTracker(reactiveFn, L, E, options = { displayName: 'TrackerContainer' }) {
   const onPropsChange = (props, onData) => {
     if (!props.context) {
       throw new Error('No context passed as prop.');

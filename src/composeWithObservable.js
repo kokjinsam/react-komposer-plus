@@ -1,7 +1,7 @@
 import compose from './compose';
 import invariant from 'invariant';
 
-function composeWithObservable(fn, L, E, options) {
+function composeWithObservable(fn, L, E, options = { displayName: 'ObservableContainer' }) {
   const onPropsChange = (props, sendData) => {
     const observable = fn(props);
     invariant(

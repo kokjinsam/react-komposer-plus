@@ -1,5 +1,10 @@
 # ChangeLog
 
+## v2.0.8
+20-June-2016
+
+* Better container naming.
+
 ## v2.0.7
 09-June-2016
 

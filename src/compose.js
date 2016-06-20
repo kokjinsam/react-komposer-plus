@@ -6,7 +6,7 @@ import { inheritStatics, isReactNative } from './utils';
 import DefaultLoadingComponent from './components/DefaultLoadingComponent';
 import DefaultErrorComponent from './components/DefaultErrorComponent';
 
-function compose(fn, L1, E1, options = { pure: true }) {
+function compose(fn, L1, E1, options = { pure: true, displayName: 'Container' }) {
   return (ChildComponent, L2, E2) => {
     invariant(
       Boolean(ChildComponent),
@@ -139,7 +139,7 @@ function compose(fn, L1, E1, options = { pure: true }) {
       }
     };
 
-    return inheritStatics(Container, ChildComponent);
+    return inheritStatics(Container, ChildComponent, options.displayName);
   };
 }
 

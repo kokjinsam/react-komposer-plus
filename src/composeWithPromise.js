@@ -1,7 +1,7 @@
 import invariant from 'invariant';
 import compose from './compose';
 
-function composeWithPromise(fn, L, E, options) {
+function composeWithPromise(fn, L, E, options = { displayName: 'PromiseContainer' }) {
   const onPropsChange = (props, onData) => {
     const promise = fn(props);
     invariant(
