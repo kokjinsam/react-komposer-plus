@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const propTypes = {
-  error: PropTypes.string,
+  error: PropTypes.object,
 };
 
 const DefaultErrorComponent = ({ error }) => {
