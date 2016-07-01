@@ -1,7 +1,8 @@
 import React from 'react';
 import invariant from 'invariant';
 import shallowEqual from 'shallowequal';
-import { inheritStatics, isReactNative } from './utils';
+import inheritStatics from '../utils/inheritStatics';
+import isReactNative from '../utils/inheritStatics';
 
 import DefaultLoadingComponent from './components/DefaultLoadingComponent';
 import DefaultErrorComponent from './components/DefaultErrorComponent';

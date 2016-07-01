@@ -1,5 +1,10 @@
 # ChangeLog
 
+## v2.1.0
+01-July-2016
+
+* Added functional React specs
+
 ## v2.0.8
 20-June-2016
 
