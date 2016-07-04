@@ -1,5 +1,5 @@
-import composeAll from './composeAll';
 import compose from './compose';
+import composeAll from './composeAll';
 import withObservable from './composers/withObservable';
 import withPromise from './composers/withPromise';
 import withRedux from './composers/withRedux';
