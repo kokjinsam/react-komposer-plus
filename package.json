@@ -1,6 +1,6 @@
 {
   "name": "react-komposer-plus",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Compose React containers and feed data into components.",
   "main": "index.js",
   "react-native": "index.js",

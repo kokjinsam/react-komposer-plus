@@ -1,4 +1,4 @@
-import compose from './base';
+import compose from '../compose';
 import invariant from 'invariant';
 
 function composeWithObservable(fn, L, E, options = { displayName: 'WithObservable' }) {

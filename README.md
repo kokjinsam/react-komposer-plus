@@ -12,4 +12,4 @@ npm i --save react-komposer-plus
 
 ## Full APIs
 
-See [here](https://github.com/sammkj/react-komposer-plus/blob/master/docs/api.md)
+See [here](https://github/sammkj/react-komposer-plus/docs/api.md)
