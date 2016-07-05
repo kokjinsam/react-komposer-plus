@@ -13,6 +13,10 @@ import withState from './specs/withState';
 export {
   compose,
   composeAll,
+  withObservable as composeWithObservable,
+  withPromise as composeWithPromise,
+  withRedux as composeWithRedux,
+  withTracker as composeWithTracker,
   withObservable,
   withPromise,
   withRedux,
