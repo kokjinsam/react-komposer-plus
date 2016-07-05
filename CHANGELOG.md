@@ -1,5 +1,11 @@
 # ChangeLog
 
+## v2.2.0
+05-July-2016
+
+* Added `withStateHandlers`.
+* Renamed `withRedux` to `withReduxState`.
+
 ## v2.1.0
 01-July-2016
 

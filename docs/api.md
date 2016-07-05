@@ -11,6 +11,7 @@
   * [`getContext`](#getContext)
   * [`withHandlers`](#withHandlers)
   * [`withState`](#withState)
+  * [`withStateHandlers`](#withStateHandlers)
   * [`withLifecycle`](withLifecycle)
 
 * **Other integrations**
@@ -98,6 +99,37 @@ const initialState = {
   counter: 1,
 }
 const ComposedCounter = withState(initialState, 'customStateName', 'customStateSetterName')(Counter);
+```
+
+### `withStateHandlers`
+
+```
+import {
+  withState,
+  withStateHandlers,
+  composeAll,
+} from 'react-komposer-plus';
+
+const Clock = ({ handleClickCounter }) => (
+  <button onClick={handleClick}>Clock</button>
+);
+
+const ComposedClock = composeAll(
+  withStateHandlers({
+    handleClick: (state, props) {
+      // do something with state and props
+
+      // return a state object
+      return {
+        time: state.time + 60,
+      };
+    },
+  }),
+  withState({
+    time: 0,
+    counter: 1,
+  })
+)(Clock);
 ```
 
 ### `withLifecycle`

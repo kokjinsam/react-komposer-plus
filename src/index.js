@@ -1,29 +1,36 @@
 import compose from './compose';
 import composeAll from './composeAll';
+
+/* composers */
 import withObservable from './composers/withObservable';
 import withPromise from './composers/withPromise';
-import withRedux from './composers/withRedux';
+import withReduxState from './composers/withReduxState';
 import withTracker from './composers/withTracker';
-import getContext from './specs/getContext';
-import withContext from './specs/withContext';
-import withHandlers from './specs/withHandlers';
-import withLifecycle from './specs/withLifecycle';
-import withState from './specs/withState';
+
+/* helpers */
+import getContext from './helpers/getContext';
+import withContext from './helpers/withContext';
+import withHandlers from './helpers/withHandlers';
+import withLifecycle from './helpers/withLifecycle';
+import withState from './helpers/withState';
+import withStateHandlers from './helpers/withStateHandlers';
 
 export {
   compose,
   composeAll,
   withObservable as composeWithObservable,
   withPromise as composeWithPromise,
-  withRedux as composeWithRedux,
+  withReduxState as composeWithRedux,
   withTracker as composeWithTracker,
   withObservable,
   withPromise,
-  withRedux,
+  withReduxState,
+  withReduxState as withRedux, // to be removed
   withTracker,
   getContext,
   withContext,
   withHandlers,
   withLifecycle,
   withState,
+  withStateHandlers,
 };

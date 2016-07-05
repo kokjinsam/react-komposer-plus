@@ -23,6 +23,9 @@ function composeWithState(
         const stateProps = {
           [stateName]: this.state,
           [stateSetterName]: this.setStateValue,
+
+          // this is required for withStateHandlers()
+          [`__stateSetterNameFor(${stateName})`]: stateSetterName,
         };
 
         return (
