@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import hoistNonReactStatic from 'hoist-non-react-statics';
-import getDisplayName from '../utils/getDisplayName';
+import getDisplayName from './getDisplayName';
 
 const mapHandlers = (handlers, func) => {
   const result = {};
@@ -24,13 +24,13 @@ function composeWithHandlers(handlers) {
 
       cachedHandlers = {};
 
-      handlers = mapHandlers(handlers, (createHandler, handlerName) => {
+      handlers = mapHandlers(handlers, (createHandler, handlerName) => (...args) => {
         const cachedHandler = this.cachedHandlers[handlerName];
         if (cachedHandler) {
-          return cachedHandler;
+          return cachedHandler(...args);
         }
 
-        const handler = createHandler.bind(null, this.props);
+        const handler = createHandler(this.props);
         this.cachedHandlers[handlerName] = handler;
 
         if (typeof handler !== 'function') {
@@ -38,7 +38,7 @@ function composeWithHandlers(handlers) {
           throw new Error(message);
         }
 
-        return handler;
+        return handler(...args);
       })
 
       render() {
