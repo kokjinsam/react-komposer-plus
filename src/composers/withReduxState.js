@@ -23,7 +23,7 @@ function composeReduxBase(fn, props, onData) {
   };
 
   processState();
-  Store.subscribe(processState);
+  return Store.subscribe(processState);
 }
 
 export default function composeWithRedux(fn, L1, E1, options = { displayName: 'WithRedux' }) {
